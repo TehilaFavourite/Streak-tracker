@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Rust & Web3 Security Mastery Streak</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>🦀 Rust Mastery</h3>
+        <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <h4>📊 Overview</h4>
+          <a
+            href="#motivation-board"
+            class="nav-link"
+            onclick="scrollToSection('motivation-board')"
+          >
+            🌟 Identity & Vision
+          </a>
+          <a
+            href="#main-streak"
+            class="nav-link"
+            onclick="scrollToSection('main-streak')"
+          >
+            🔥 Main Streak
+          </a>
+          <a
+            href="#stats-row"
+            class="nav-link"
+            onclick="scrollToSection('stats-row')"
+          >
+            📈 Statistics
+          </a>
+          <a
+            href="#progress-grid"
+            class="nav-link"
+            onclick="scrollToSection('progress-grid')"
+          >
+            📊 Progress Bars
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <h4>🎯 Activities</h4>
+          <a
+            href="#pomodoro-section"
+            class="nav-link"
+            onclick="scrollToSection('pomodoro-section')"
+          >
+            ⏰ Focus Timer
+          </a>
+          <a
+            href="#ambient-sound-section"
+            class="nav-link"
+            onclick="scrollToSection('ambient-sound-section')"
+          >
+            🎵 Focus Ambience
+          </a>
+          <a
+            href="#framework-section"
+            class="nav-link"
+            onclick="scrollToSection('framework-section')"
+          >
+            ⚡ XP Point System
+          </a>
+          <a
+            href="#daily-tasks"
+            class="nav-link"
+            onclick="scrollToSection('daily-tasks')"
+          >
+            📋 Daily Tasks
+          </a>
+          <a
+            href="#todo-section"
+            class="nav-link"
+            onclick="scrollToSection('todo-section')"
+          >
+            📝 Todo Lists
+          </a>
+          <a
+            href="#daily-habits"
+            class="nav-link"
+            onclick="scrollToSection('daily-habits')"
+          >
+            🔥 Daily Habits
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <h4>🏆 Achievements</h4>
+          <a
+            href="#achievements-section"
+            class="nav-link"
+            onclick="scrollToSection('achievements-section')"
+          >
+            🏆 Achievement System
+          </a>
+          <a
+            href="#rewards-section"
+            class="nav-link"
+            onclick="scrollToSection('rewards-section')"
+          >
+            🎁 Level Up Rewards
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <h4>📅 Calendar</h4>
+          <a
+            href="#streak-calendar"
+            class="nav-link"
+            onclick="scrollToSection('streak-calendar')"
+          >
+            🗓️ Streak Calendar
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <h4>⚙️ Actions</h4>
+          <a
+            href="#action-buttons"
+            class="nav-link"
+            onclick="scrollToSection('action-buttons')"
+          >
+            🎮 Action Buttons
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-stats">
+          <div class="sidebar-stat">
+            <span class="sidebar-stat-number" id="sidebar-streak">0</span>
+            <span class="sidebar-stat-label">Day Streak</span>
+          </div>
+          <div class="sidebar-stat">
+            <span class="sidebar-stat-number" id="sidebar-xp">0</span>
+            <span class="sidebar-stat-label">Total XP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div
+      class="sidebar-overlay"
+      id="sidebar-overlay"
+      onclick="toggleSidebar()"
+    ></div>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <div class="container">
+      <div class="header">
+        <div class="header-top">
+          <button class="desktop-sidebar-toggle" onclick="toggleSidebar()">
+            ☰
+          </button>
+          <h1 class="title">🦀 Elite Rust & Web3 Security Mastery System</h1>
+        </div>
+        <p class="subtitle">
+          Comprehensive 24-Month Journey to Blockchain Security Excellence
+        </p>
+      </div>
+
+      <div id="milestone-alert" class="milestone-alert hidden">
+        🎉 Milestone Achieved! You've reached a new level in your mastery
+        journey!
+      </div>
+
+      <!-- Motivation Board -->
+      <div class="motivation-board" id="motivation-board">
+        <div class="motivation-header">
+          <h2>🌟 Your Elite Identity & Vision</h2>
+          <p>Daily reminders of who you are becoming</p>
+        </div>
+
+        <div class="motivation-grid">
+          <!-- Identity Statement -->
+          <div class="motivation-card identity-card">
+            <div class="motivation-icon">🦀</div>
+            <h3>Your Elite Identity</h3>
+            <div class="motivation-content">
+              <p>
+                I am a world-class Rust security researcher who approaches every
+                challenge with systematic thinking and relentless curiosity. My
+                daily habits include 2+ hours of focused deep work, active
+                community engagement, and continuous learning. When I face
+                technical challenges, I break them down methodically, seek help
+                when needed, and document solutions for others. Other developers
+                recognize me as someone who consistently delivers high-quality
+                insights and mentors junior developers with patience and
+                expertise. My approach to learning is characterized by
+                disciplined practice, evidence-based progress tracking, and a
+                commitment to teaching what I learn.
+              </p>
+            </div>
+          </div>
+
+          <!-- Core Philosophy -->
+          <div class="motivation-card philosophy-card">
+            <div class="motivation-icon">💎</div>
+            <h3>Core Philosophy</h3>
+            <div class="motivation-content">
+              <blockquote>
+                "The person you become in pursuit of your goals is more valuable
+                than the goals themselves. Your character is forged in the daily
+                choice between comfort and growth."
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Becoming Statement -->
+          <div class="motivation-card becoming-card">
+            <div class="motivation-icon">🚀</div>
+            <h3>Who You Are Becoming</h3>
+            <div class="motivation-content">
+              <p>
+                I am becoming the person I admire. Every day, through consistent
+                action and disciplined practice, I am building the character,
+                skills, and mindset of a world-class Rust security researcher.
+                My commitment to growth today creates the expert I will be
+                tomorrow. The compound effect of my daily disciplines is
+                transforming not just my technical abilities, but my entire
+                identity. I am someone who shows up, regardless of mood or
+                circumstances, because my future depends on my present
+                consistency.
+              </p>
+            </div>
+          </div>
+
+          <!-- Future Vision -->
+          <div class="motivation-card vision-card">
+            <div class="motivation-icon">🔮</div>
+            <h3>24-Month Future Vision</h3>
+            <div class="motivation-content">
+              <p>
+                It's 24 months from now. I wake up naturally at 5:30 AM,
+                energized for another day of work that feels like play. My
+                morning routine is completely automatic - exercise, meditation,
+                and reviewing the day's priorities happen without conscious
+                effort. I'm recognized in the Rust security community as someone
+                who consistently produces high-quality research and tools. My
+                GitHub has thousands of stars across my projects, and I receive
+                regular invitations to speak at conferences. I mentor junior
+                developers and have helped them land their first security roles.
+                My income has grown significantly because companies actively
+                seek out my expertise for security audits and consulting. Most
+                importantly, I go to bed each night knowing that my work is
+                making the internet a safer place for millions of people.
+              </p>
+            </div>
+          </div>
+
+          <!-- Commitment Statement -->
+          <div class="motivation-card commitment-card">
+            <div class="motivation-icon">⚡</div>
+            <h3>Your Sacred Commitment</h3>
+            <div class="motivation-content">
+              <p>
+                I commit to the 24-month transformation journey outlined in this
+                system. I understand that this commitment is not about
+                perfection, but about consistent return to the path when I
+                inevitably stray. I will show up every day, regardless of mood,
+                motivation, or circumstances, because I am building not just
+                technical skills, but character. I will measure progress not
+                just in code written or concepts learned, but in the person I am
+                becoming. I commit to serving others as I learn, knowing that
+                teaching reinforces learning and contribution creates meaning. I
+                will celebrate small wins, learn from failures, and maintain
+                perspective on the long-term vision when daily progress feels
+                slow. This is not just about becoming a Rust security expert -
+                this is about becoming someone who can achieve any goal through
+                systematic, disciplined action. My future self is counting on
+                the commitment I make today.
+              </p>
+            </div>
+          </div>
+
+          <!-- Excellence Quote -->
+          <div class="motivation-card excellence-card">
+            <div class="motivation-icon">🏆</div>
+            <h3>Path to Excellence</h3>
+            <div class="motivation-content">
+              <blockquote>
+                "Excellence is not a destination, but a way of traveling. The
+                person you become in pursuit of mastery is more valuable than
+                the skills themselves. Every day you choose growth over comfort,
+                you are becoming who you were meant to be."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pomodoro Timer -->
+      <div class="pomodoro-section" id="pomodoro-section">
+        <div class="pomodoro-header">
+          <h2>⏰ Focus Timer</h2>
+          <p>Deep work sessions for maximum productivity</p>
+        </div>
+
+        <div class="pomodoro-container">
+          <div class="timer-display">
+            <div class="timer-circle">
+              <div class="timer-progress" id="timer-progress"></div>
+              <div class="timer-content">
+                <div class="timer-time" id="timer-time">25:00</div>
+                <div class="timer-label" id="timer-label">Focus Time</div>
+                <div class="timer-session" id="timer-session">
+                  Session 1 of 4
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timer-controls">
+            <button
+              class="timer-btn start-btn"
+              id="start-btn"
+              onclick="startTimer()"
+            >
+              ▶️ Start Focus
+            </button>
+            <button
+              class="timer-btn pause-btn"
+              id="pause-btn"
+              onclick="pauseTimer()"
+              style="display: none"
+            >
+              ⏸️ Pause
+            </button>
+            <button class="timer-btn reset-btn" onclick="resetTimer()">
+              🔄 Reset
+            </button>
+            <button class="timer-btn skip-btn" onclick="skipTimer()">
+              ⏭️ Skip
+            </button>
+          </div>
+
+          <div class="timer-settings">
+            <div class="settings-grid">
+              <div class="setting-group">
+                <label for="focus-time">Focus Time (min)</label>
+                <input
+                  type="number"
+                  id="focus-time"
+                  value="25"
+                  min="1"
+                  max="120"
+                  onchange="updateTimerSettings()"
+                />
+              </div>
+
+              <div class="setting-group">
+                <label for="break-time">Short Break (min)</label>
+                <input
+                  type="number"
+                  id="break-time"
+                  value="5"
+                  min="1"
+                  max="30"
+                  onchange="updateTimerSettings()"
+                />
+              </div>
+
+              <div class="setting-group">
+                <label for="long-break-time">Long Break (min)</label>
+                <input
+                  type="number"
+                  id="long-break-time"
+                  value="15"
+                  min="1"
+                  max="60"
+                  onchange="updateTimerSettings()"
+                />
+              </div>
+
+              <div class="setting-group">
+                <label for="sessions-before-long"
+                  >Sessions Before Long Break</label
+                >
+                <input
+                  type="number"
+                  id="sessions-before-long"
+                  value="4"
+                  min="1"
+                  max="10"
+                  onchange="updateTimerSettings()"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="timer-stats">
+            <div class="stat-item">
+              <span class="stat-number" id="completed-sessions">0</span>
+              <span class="stat-label">Sessions Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="total-focus-time">0</span>
+              <span class="stat-label">Total Focus Time (min)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="current-streak">0</span>
+              <span class="stat-label">Day Streak</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ambient Sound System -->
+      <div class="ambient-sound-section" id="ambient-sound-section">
+        <div class="ambient-header">
+          <h2>🎵 Focus Ambience</h2>
+          <p>Enhance your concentration with curated soundscapes</p>
+        </div>
+
+        <div class="ambient-container">
+          <div class="sound-controls">
+            <div class="master-control">
+              <button
+                class="master-toggle"
+                id="master-toggle"
+                onclick="toggleMasterSound()"
+              >
+                🔊 Master: OFF
+              </button>
+              <div class="volume-slider">
+                <input
+                  type="range"
+                  id="master-volume"
+                  min="0"
+                  max="100"
+                  value="50"
+                  onchange="updateMasterVolume()"
+                />
+                <span class="volume-label">50%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sound-grid">
+            <!-- White Noise -->
+            <div class="sound-card" data-sound="white-noise">
+              <div class="sound-icon">🌊</div>
+              <h3>White Noise</h3>
+              <p>Pure focus enhancement</p>
+              <div class="sound-controls">
+                <button
+                  class="sound-toggle"
+                  onclick="toggleSound('white-noise')"
+                >
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="30"
+                  onchange="updateSoundVolume('white-noise', this.value)"
+                />
+                <span class="volume-display">30%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-white-noise"></div>
+            </div>
+
+            <!-- Rain -->
+            <div class="sound-card" data-sound="rain">
+              <div class="sound-icon">🌧️</div>
+              <h3>Rain</h3>
+              <p>Gentle rainfall ambience</p>
+              <div class="sound-controls">
+                <button class="sound-toggle" onclick="toggleSound('rain')">
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="25"
+                  onchange="updateSoundVolume('rain', this.value)"
+                />
+                <span class="volume-display">25%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-rain"></div>
+            </div>
+
+            <!-- Forest -->
+            <div class="sound-card" data-sound="forest">
+              <div class="sound-icon">🌲</div>
+              <h3>Forest</h3>
+              <p>Nature's symphony</p>
+              <div class="sound-controls">
+                <button class="sound-toggle" onclick="toggleSound('forest')">
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="20"
+                  onchange="updateSoundVolume('forest', this.value)"
+                />
+                <span class="volume-display">20%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-forest"></div>
+            </div>
+
+            <!-- Ocean -->
+            <div class="sound-card" data-sound="ocean">
+              <div class="sound-icon">🌊</div>
+              <h3>Ocean Waves</h3>
+              <p>Calming sea rhythm</p>
+              <div class="sound-controls">
+                <button class="sound-toggle" onclick="toggleSound('ocean')">
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="25"
+                  onchange="updateSoundVolume('ocean', this.value)"
+                />
+                <span class="volume-display">25%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-ocean"></div>
+            </div>
+
+            <!-- Fireplace -->
+            <div class="sound-card" data-sound="fireplace">
+              <div class="sound-icon">🔥</div>
+              <h3>Fireplace</h3>
+              <p>Warm crackling fire</p>
+              <div class="sound-controls">
+                <button class="sound-toggle" onclick="toggleSound('fireplace')">
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="20"
+                  onchange="updateSoundVolume('fireplace', this.value)"
+                />
+                <span class="volume-display">20%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-fireplace"></div>
+            </div>
+
+            <!-- Coffee Shop -->
+            <div class="sound-card" data-sound="coffee-shop">
+              <div class="sound-icon">☕</div>
+              <h3>Coffee Shop</h3>
+              <p>Productive background buzz</p>
+              <div class="sound-controls">
+                <button
+                  class="sound-toggle"
+                  onclick="toggleSound('coffee-shop')"
+                >
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="15"
+                  onchange="updateSoundVolume('coffee-shop', this.value)"
+                />
+                <span class="volume-display">15%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-coffee-shop"></div>
+            </div>
+
+            <!-- Keyboard -->
+            <div class="sound-card" data-sound="keyboard">
+              <div class="sound-icon">⌨️</div>
+              <h3>Keyboard</h3>
+              <p>Mechanical typing sounds</p>
+              <div class="sound-controls">
+                <button class="sound-toggle" onclick="toggleSound('keyboard')">
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="10"
+                  onchange="updateSoundVolume('keyboard', this.value)"
+                />
+                <span class="volume-display">10%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-keyboard"></div>
+            </div>
+
+            <!-- Lofi -->
+            <div class="sound-card" data-sound="lofi">
+              <div class="sound-icon">🎧</div>
+              <h3>Lo-Fi Beats</h3>
+              <p>Chill coding vibes</p>
+              <div class="sound-controls">
+                <button class="sound-toggle" onclick="toggleSound('lofi')">
+                  ▶️
+                </button>
+                <input
+                  type="range"
+                  class="volume-control"
+                  min="0"
+                  max="100"
+                  value="20"
+                  onchange="updateSoundVolume('lofi', this.value)"
+                />
+                <span class="volume-display">20%</span>
+              </div>
+              <div class="youtube-embed" id="youtube-lofi"></div>
+            </div>
+          </div>
+
+          <div class="sound-presets">
+            <h3>🎛️ Quick Presets</h3>
+            <div class="preset-buttons">
+              <button class="preset-btn" onclick="loadPreset('deep-focus')">
+                🧠 Deep Focus
+              </button>
+              <button class="preset-btn" onclick="loadPreset('nature')">
+                🌿 Nature
+              </button>
+              <button class="preset-btn" onclick="loadPreset('productivity')">
+                ⚡ Productivity
+              </button>
+              <button class="preset-btn" onclick="loadPreset('relax')">
+                😌 Relax
+              </button>
+              <button class="preset-btn" onclick="loadPreset('coding')">
+                💻 Coding
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-streak" id="main-streak">
+        <div class="streak-counter" id="streak-counter">0</div>
+        <div class="streak-label">Day Mastery Streak</div>
+        <div class="phase-indicator" id="phase-indicator">
+          Phase 1: Foundations & Smart Contract Security
+        </div>
+      </div>
+
+      <div class="stats-row" id="stats-row">
+        <div class="stat-card">
+          <span class="stat-number" id="total-xp">0</span>
+          <div class="stat-label">🌟 Total XP</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="projects-completed">0</span>
+          <div class="stat-label">🚀 Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="skills-mastered">0</span>
+          <div class="stat-label">🎯 Skills Mastered</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="current-month">1</span>
+          <div class="stat-label">📅 Current Month</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="framework-completion">0</span>
+          <div class="stat-label">🧠 Framework Systems</div>
+        </div>
+      </div>
+
+      <div class="progress-grid" id="progress-grid">
+        <div class="progress-card">
+          <div class="card-title">🦀 Rust Mastery</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="rust-progress"
+              style="width: 0%"
+            ></div>
+          </div>
+          <div>Progress: <span id="rust-percentage">0</span>%</div>
+        </div>
+
+        <div class="progress-card">
+          <div class="card-title">🔐 Cryptography & Security</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="crypto-progress"
+              style="width: 0%"
+            ></div>
+          </div>
+          <div>Progress: <span id="crypto-percentage">0</span>%</div>
+        </div>
+
+        <div class="progress-card">
+          <div class="card-title">⚔️ Smart Contract Security</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="security-progress"
+              style="width: 0%"
+            ></div>
+          </div>
+          <div>Progress: <span id="security-percentage">0</span>%</div>
+        </div>
+
+        <div class="progress-card">
+          <div class="card-title">🧬 Zero-Knowledge Proofs</div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="zk-progress" style="width: 0%"></div>
+          </div>
+          <div>Progress: <span id="zk-percentage">0</span>%</div>
+        </div>
+
+        <div class="progress-card">
+          <div class="card-title">🎭 Identity & Vision System</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="identity-progress"
+              style="width: 0%"
+            ></div>
+          </div>
+          <div>Progress: <span id="identity-percentage">0</span>%</div>
+        </div>
+
+        <div class="progress-card">
+          <div class="card-title">🎯 Focus & Discipline Framework</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="focus-progress"
+              style="width: 0%"
+            ></div>
+          </div>
+          <div>Progress: <span id="focus-percentage">0</span>%</div>
+        </div>
+      </div>
+
+      <div class="framework-section">
+        <div class="framework-title">🎯 XP Point System</div>
+        <div class="framework-grid" id="framework-grid">
+          <!-- Framework items will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="daily-tasks" id="daily-tasks">
+        <div class="tasks-title">📋 Elite Mastery Tasks</div>
+        <div id="daily-task-list">
+          <!-- Tasks will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="todo-section">
+        <div class="todo-title">📝 Daily Todo Lists</div>
+
+        <div class="todo-tabs">
+          <button class="todo-tab active" onclick="switchTodoTab('morning')">
+            🌅 Morning Routine
+          </button>
+          <button class="todo-tab" onclick="switchTodoTab('evening')">
+            🌙 Evening Routine
+          </button>
+          <button class="todo-tab" onclick="switchTodoTab('custom')">
+            ⚡ Custom Tasks
+          </button>
+        </div>
+
+        <!-- Morning Routine -->
+        <div id="todo-morning-content" class="todo-content active">
+          <div class="todo-list" id="todo-morning-list">
+            <!-- Morning todos will be populated by JavaScript -->
+          </div>
+
+          <div class="todo-add-form">
+            <div class="todo-form-row">
+              <input
+                type="text"
+                id="todo-morning-text"
+                class="todo-input"
+                placeholder="Add morning task..."
+              />
+              <input
+                type="text"
+                id="todo-morning-time"
+                class="todo-time-input"
+                placeholder="5 min"
+              />
+              <button class="todo-add-btn" onclick="addTodo('morning')">
+                Add Task
+              </button>
+            </div>
+          </div>
+
+          <div class="todo-stats" id="todo-morning-stats">
+            <!-- Stats will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Evening Routine -->
+        <div id="todo-evening-content" class="todo-content">
+          <div class="todo-list" id="todo-evening-list">
+            <!-- Evening todos will be populated by JavaScript -->
+          </div>
+
+          <div class="todo-add-form">
+            <div class="todo-form-row">
+              <input
+                type="text"
+                id="todo-evening-text"
+                class="todo-input"
+                placeholder="Add evening task..."
+              />
+              <input
+                type="text"
+                id="todo-evening-time"
+                class="todo-time-input"
+                placeholder="10 min"
+              />
+              <button class="todo-add-btn" onclick="addTodo('evening')">
+                Add Task
+              </button>
+            </div>
+          </div>
+
+          <div class="todo-stats" id="todo-evening-stats">
+            <!-- Stats will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Custom Tasks -->
+        <div id="todo-custom-content" class="todo-content">
+          <div class="todo-list" id="todo-custom-list">
+            <!-- Custom todos will be populated by JavaScript -->
+          </div>
+
+          <div class="todo-add-form">
+            <div class="todo-form-row">
+              <input
+                type="text"
+                id="todo-custom-text"
+                class="todo-input"
+                placeholder="Add custom task..."
+              />
+              <input
+                type="text"
+                id="todo-custom-time"
+                class="todo-time-input"
+                placeholder="30 min"
+              />
+              <button class="todo-add-btn" onclick="addTodo('custom')">
+                Add Task
+              </button>
+            </div>
+          </div>
+
+          <div class="todo-stats" id="todo-custom-stats">
+            <!-- Stats will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <div class="daily-habits" id="daily-habits">
+        <h2 class="habits-title">🔥 4 Core Daily Habits</h2>
+
+        <div class="habits-grid">
+          <div class="habit-card" id="habit-code">
+            <div class="habit-header">
+              <div class="habit-icon">💻</div>
+              <div class="habit-title">Code Practice</div>
+              <div class="habit-time">30 min</div>
+            </div>
+            <div class="habit-description">
+              Write Rust code, build projects, solve problems. Same time each
+              day for consistency.
+            </div>
+            <div class="habit-streak">
+              <div class="habit-streak-count">🔥 0 day streak</div>
+              <div class="habit-checkbox" id="code-checkbox">✓</div>
+            </div>
+          </div>
+
+          <div class="habit-card" id="habit-security">
+            <div class="habit-header">
+              <div class="habit-icon">🛡️</div>
+              <div class="habit-title">Security Learning</div>
+              <div class="habit-time">15 min</div>
+            </div>
+            <div class="habit-description">
+              Study vulnerabilities, read about hacks, watch security videos.
+              Build your threat awareness.
+            </div>
+            <div class="habit-streak">
+              <div class="habit-streak-count">🔥 0 day streak</div>
+              <div class="habit-checkbox" id="security-checkbox">✓</div>
+            </div>
+          </div>
+
+          <div class="habit-card" id="habit-community">
+            <div class="habit-header">
+              <div class="habit-icon">👥</div>
+              <div class="habit-title">Community Engagement</div>
+              <div class="habit-time">10 min</div>
+            </div>
+            <div class="habit-description">
+              Post on Twitter, Discord discussions, help others. Build your
+              network and reputation.
+            </div>
+            <div class="habit-streak">
+              <div class="habit-streak-count">🔥 0 day streak</div>
+              <div class="habit-checkbox" id="community-checkbox">✓</div>
+            </div>
+          </div>
+
+          <div class="habit-card" id="habit-reflection">
+            <div class="habit-header">
+              <div class="habit-icon">📝</div>
+              <div class="habit-title">Progress Review</div>
+              <div class="habit-time">5 min</div>
+            </div>
+            <div class="habit-description">
+              Reflect on learnings, update streak count, plan tomorrow. Compound
+              your growth.
+            </div>
+            <div class="habit-streak">
+              <div class="habit-streak-count">🔥 0 day streak</div>
+              <div class="habit-checkbox" id="reflection-checkbox">✓</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="habits-progress">
+          <div class="habits-progress-text">Today's Completion Rate</div>
+          <div class="habits-completion-rate" id="habits-completion">0%</div>
+        </div>
+      </div>
+
+      <div class="achievements-section" id="achievements-section">
+        <div class="framework-title">🏆 Achievement System</div>
+        <div style="text-align: center; margin-bottom: 20px">
+          <button
+            class="btn btn-secondary"
+            onclick="showAchievementTracker()"
+            style="margin: 0 10px"
+          >
+            📊 Track Achievements
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="showAchievementProgressUpdater()"
+            style="margin: 0 10px"
+          >
+            📈 Update Progress
+          </button>
+        </div>
+        <div id="achievement-badges">
+          <!-- Achievement badges will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="rewards-section" id="rewards-section">
+        <div class="rewards-title">🎁 Level Up Rewards</div>
+        <div class="rewards-grid" id="rewards-grid">
+          <!-- Rewards will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="streak-calendar" id="streak-calendar">
+        <div class="calendar-title">🗓️ Mastery Streak Calendar</div>
+        <div class="calendar-grid" id="calendar-grid">
+          <!-- Calendar will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="action-buttons" id="action-buttons">
+        <button class="btn btn-primary" onclick="completeDay()">
+          ✅ Complete Today's Mastery
+        </button>
+        <button class="btn btn-secondary" onclick="viewProgress()">
+          📊 Detailed Progress Report
+        </button>
+        <button class="btn btn-secondary" onclick="exportProgress()">
+          💾 Export Progress Data
+        </button>
+        <button class="btn btn-danger" onclick="resetStreak()">
+          🔄 Reset System
+        </button>
+      </div>
+    </div>
+
+    <!-- Load JavaScript files -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script src="habits.js"></script>
+    <script>
+      // Initialize the application
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeHabits();
+        loadData();
+        updateUI();
+        updateOverallProgress();
+        initializeSidebar();
+        initializeTimer();
+        initializeAmbientSound();
+
+        // Show welcome message for new users
+        if (streakData.currentStreak === 0) {
+          setTimeout(() => {
+            showNotification(
+              "🚀 Welcome to Elite Rust & Web3 Security Mastery! Start your journey today!"
+            );
+          }, 1000);
+        }
+      });
+
+      // Auto-save every 30 seconds
+      setInterval(saveData, 30000);
+
+      // Sidebar functionality
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("sidebar-overlay");
+        const container = document.querySelector(".container");
+
+        sidebar.classList.toggle("open");
+        overlay.classList.toggle("active");
+        container.classList.toggle("sidebar-open");
+      }
+
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+
+          // Update active nav link
+          updateActiveNavLink(sectionId);
+
+          // Close sidebar on mobile
+          if (window.innerWidth <= 768) {
+            toggleSidebar();
+          }
+        }
+      }
+
+      function updateActiveNavLink(sectionId) {
+        // Remove active class from all nav links
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        // Add active class to current section link
+        const activeLink = document.querySelector(
+          `[onclick="scrollToSection('${sectionId}')"]`
+        );
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      }
+
+      function initializeSidebar() {
+        // Update sidebar stats
+        updateSidebarStats();
+
+        // Add scroll listener for active section highlighting
+        window.addEventListener("scroll", highlightActiveSection);
+
+        // Initial active section check
+        highlightActiveSection();
+      }
+
+      function updateSidebarStats() {
+        const sidebarStreak = document.getElementById("sidebar-streak");
+        const sidebarXp = document.getElementById("sidebar-xp");
+
+        if (sidebarStreak) {
+          sidebarStreak.textContent = streakData.currentStreak || 0;
+        }
+        if (sidebarXp) {
+          sidebarXp.textContent = streakData.totalXp || 0;
+        }
+      }
+
+      function highlightActiveSection() {
+        const sections = [
+          "motivation-board",
+          "pomodoro-section",
+          "ambient-sound-section",
+          "main-streak",
+          "stats-row",
+          "progress-grid",
+          "framework-section",
+          "daily-tasks",
+          "todo-section",
+          "daily-habits",
+          "achievements-section",
+          "rewards-section",
+          "streak-calendar",
+          "action-buttons",
+        ];
+
+        const scrollPosition = window.scrollY + 100;
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = document.getElementById(sections[i]);
+          if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+              scrollPosition >= sectionTop &&
+              scrollPosition < sectionTop + sectionHeight
+            ) {
+              updateActiveNavLink(sections[i]);
+              break;
+            }
+          }
+        }
+      }
+
+      // Override updateUI to also update sidebar stats
+      const originalUpdateUI = window.updateUI;
+      window.updateUI = function () {
+        if (originalUpdateUI) {
+          originalUpdateUI();
+        }
+        updateSidebarStats();
+      };
+
+      // Pomodoro Timer Functionality
+      let timerInterval;
+      let timeLeft = 25 * 60; // 25 minutes in seconds
+      let totalTime = 25 * 60;
+      let isRunning = false;
+      let isBreak = false;
+      let currentSession = 1;
+      let completedSessions = 0;
+      let totalFocusTime = 0;
+      let timerStreak = 0;
+      let lastCompletedDate = null;
+      let startTime = 0; // Track when timer started
+
+      // Timer settings
+      let focusTime = 25;
+      let breakTime = 5;
+      let longBreakTime = 15;
+      let sessionsBeforeLong = 4;
+
+      function startTimer() {
+        if (!isRunning) {
+          isRunning = true;
+          document.getElementById("start-btn").style.display = "none";
+          document.getElementById("pause-btn").style.display = "inline-block";
+
+          startTime = Date.now();
+          const endTime = startTime + timeLeft * 1000;
+
+          timerInterval = setInterval(() => {
+            const now = Date.now();
+            const remaining = Math.max(0, Math.ceil((endTime - now) / 1000));
+
+            if (remaining !== timeLeft) {
+              timeLeft = remaining;
+              updateTimerDisplay();
+            }
+
+            if (timeLeft <= 0) {
+              completeTimer();
+            }
+          }, 100); // Check every 100ms instead of 1000ms for smoother updates
+        }
+      }
+
+      function pauseTimer() {
+        if (isRunning) {
+          isRunning = false;
+          clearInterval(timerInterval);
+          document.getElementById("start-btn").style.display = "inline-block";
+          document.getElementById("pause-btn").style.display = "none";
+
+          // Store the remaining time to prevent drift
+          const now = Date.now();
+          const elapsed = Math.floor((now - startTime) / 1000);
+          timeLeft = Math.max(0, totalTime - elapsed);
+        }
+      }
+
+      function resetTimer() {
+        pauseTimer();
+        isBreak = false;
+        currentSession = 1;
+        timeLeft = focusTime * 60;
+        totalTime = focusTime * 60;
+        startTime = 0;
+        updateTimerDisplay();
+        updateSessionDisplay();
+      }
+
+      function skipTimer() {
+        completeTimer();
+      }
+
+      function completeTimer() {
+        pauseTimer();
+
+        if (!isBreak) {
+          // Completed a focus session
+          completedSessions++;
+          totalFocusTime += focusTime;
+
+          // Check if it's time for a long break
+          if (currentSession % sessionsBeforeLong === 0) {
+            timeLeft = longBreakTime * 60;
+            totalTime = longBreakTime * 60;
+            isBreak = true;
+            document.getElementById("timer-label").textContent = "Long Break";
+          } else {
+            timeLeft = breakTime * 60;
+            totalTime = breakTime * 60;
+            isBreak = true;
+            document.getElementById("timer-label").textContent = "Short Break";
+          }
+
+          currentSession++;
+        } else {
+          // Completed a break
+          timeLeft = focusTime * 60;
+          totalTime = focusTime * 60;
+          isBreak = false;
+          document.getElementById("timer-label").textContent = "Focus Time";
+        }
+
+        updateTimerDisplay();
+        updateSessionDisplay();
+        updateTimerStats();
+
+        // Show notification
+        showNotification(
+          isBreak
+            ? "Break time! Take a rest."
+            : "Focus session completed! Great work!"
+        );
+
+        // Play sound (if supported)
+        if (typeof Audio !== "undefined") {
+          const audio = new Audio(
+            "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT"
+          );
+          audio.play().catch(() => {}); // Ignore errors if audio fails
+        }
+      }
+
+      function updateTimerDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        const timeString = `${minutes.toString().padStart(2, "0")}:${seconds
+          .toString()
+          .padStart(2, "0")}`;
+
+        // Only update DOM if the time has actually changed
+        const timeElement = document.getElementById("timer-time");
+        if (timeElement.textContent !== timeString) {
+          timeElement.textContent = timeString;
+        }
+
+        // Update progress circle more efficiently
+        const progress = ((totalTime - timeLeft) / totalTime) * 100;
+        const progressElement = document.getElementById("timer-progress");
+        const currentProgress = progressElement.style.background;
+        const newProgress = `conic-gradient(#4ecdc4 ${progress}%, transparent ${progress}%)`;
+
+        if (currentProgress !== newProgress) {
+          progressElement.style.background = newProgress;
+        }
+      }
+
+      function updateSessionDisplay() {
+        const sessionText = isBreak
+          ? `Break ${currentSession - 1} of ${sessionsBeforeLong}`
+          : `Session ${currentSession} of ${sessionsBeforeLong}`;
+        document.getElementById("timer-session").textContent = sessionText;
+      }
+
+      function updateTimerStats() {
+        document.getElementById("completed-sessions").textContent =
+          completedSessions;
+        document.getElementById("total-focus-time").textContent =
+          totalFocusTime;
+
+        // Update streak
+        const today = new Date().toDateString();
+        if (lastCompletedDate !== today) {
+          if (
+            lastCompletedDate ===
+            new Date(Date.now() - 24 * 60 * 60 * 1000).toDateString()
+          ) {
+            timerStreak++;
+          } else if (lastCompletedDate !== today) {
+            timerStreak = 1;
+          }
+          lastCompletedDate = today;
+        }
+        document.getElementById("current-streak").textContent = timerStreak;
+      }
+
+      function updateTimerSettings() {
+        focusTime = parseInt(document.getElementById("focus-time").value);
+        breakTime = parseInt(document.getElementById("break-time").value);
+        longBreakTime = parseInt(
+          document.getElementById("long-break-time").value
+        );
+        sessionsBeforeLong = parseInt(
+          document.getElementById("sessions-before-long").value
+        );
+
+        if (!isRunning) {
+          timeLeft = focusTime * 60;
+          totalTime = focusTime * 60;
+          updateTimerDisplay();
+        }
+      }
+
+      // Initialize timer
+      function initializeTimer() {
+        updateTimerDisplay();
+        updateSessionDisplay();
+        updateTimerStats();
+      }
+
+      // Ambient Sound System
+      let masterVolume = 0.5;
+      let masterEnabled = false;
+      let activeSounds = {};
+      let youtubePlayers = {};
+
+      // Sound presets
+      const soundPresets = {
+        "deep-focus": {
+          "white-noise": 40,
+          keyboard: 15,
+          lofi: 25,
+        },
+        nature: {
+          rain: 35,
+          forest: 30,
+          ocean: 25,
+        },
+        productivity: {
+          "coffee-shop": 25,
+          keyboard: 20,
+          "white-noise": 20,
+        },
+        relax: {
+          fireplace: 30,
+          ocean: 25,
+          rain: 20,
+        },
+        coding: {
+          keyboard: 25,
+          lofi: 30,
+          "white-noise": 15,
+        },
+      };
+
+      // YouTube video IDs for each sound
+      const youtubeVideoIds = {
+        "white-noise": "q76bMs-NwRk",
+        rain: "mPZkdNFkNps",
+        forest: "xNN7iTA57jM",
+        ocean: "1ZYb82RjKjY",
+        fireplace: "L_LUpnjgPso",
+        "coffee-shop": "5qap5aO4i9A",
+        keyboard: "3xZmlV8nUFE",
+        lofi: "jfKfPfyJRdk",
+      };
+
+      function initializeYouTubeAPI() {
+        // Load YouTube iframe API
+        if (!window.YT) {
+          const tag = document.createElement("script");
+          tag.src = "https://www.youtube.com/iframe_api";
+          const firstScriptTag = document.getElementsByTagName("script")[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
+
+        // Initialize players when API is ready
+        window.onYouTubeIframeAPIReady = function () {
+          Object.keys(youtubeVideoIds).forEach((soundName) => {
+            const playerId = `youtube-${soundName}`;
+            const container = document.getElementById(playerId);
+
+            if (container) {
+              // Create new player in the container
+              youtubePlayers[soundName] = new YT.Player(playerId, {
+                videoId: youtubeVideoIds[soundName],
+                playerVars: {
+                  autoplay: 0,
+                  mute: 1,
+                  loop: 1,
+                  playlist: youtubeVideoIds[soundName],
+                  controls: 0,
+                  showinfo: 0,
+                  rel: 0,
+                  modestbranding: 1,
+                },
+                events: {
+                  onReady: onPlayerReady,
+                  onStateChange: onPlayerStateChange,
+                },
+              });
+            }
+          });
+        };
+      }
+
+      function onPlayerReady(event) {
+        // Player is ready
+        console.log("YouTube player ready");
+      }
+
+      function onPlayerStateChange(event) {
+        // Handle player state changes
+        console.log("Player state changed:", event.data);
+      }
+
+      function toggleMasterSound() {
+        masterEnabled = !masterEnabled;
+        const toggleBtn = document.getElementById("master-toggle");
+
+        if (masterEnabled) {
+          toggleBtn.textContent = "🔊 Master: ON";
+          toggleBtn.style.background =
+            "linear-gradient(45deg, #4ecdc4, #45b7d1)";
+        } else {
+          toggleBtn.textContent = "🔊 Master: OFF";
+          toggleBtn.style.background = "linear-gradient(45deg, #666, #888)";
+
+          // Stop all sounds
+          Object.keys(activeSounds).forEach((sound) => {
+            stopSound(sound);
+          });
+        }
+      }
+
+      function updateMasterVolume() {
+        const volumeSlider = document.getElementById("master-volume");
+        const volumeLabel = document.querySelector(".volume-label");
+        masterVolume = volumeSlider.value / 100;
+        volumeLabel.textContent = volumeSlider.value + "%";
+
+        // Update all active sounds
+        Object.keys(activeSounds).forEach((sound) => {
+          if (activeSounds[sound] && youtubePlayers[sound]) {
+            const volume = Math.round(
+              masterVolume * activeSounds[sound].volume
+            );
+            youtubePlayers[sound].setVolume(volume);
+          }
+        });
+      }
+
+      function toggleSound(soundName) {
+        if (!masterEnabled) {
+          showNotification("Please enable master sound first");
+          return;
+        }
+
+        if (activeSounds[soundName]) {
+          stopSound(soundName);
+        } else {
+          playSound(soundName);
+        }
+      }
+
+      function playSound(soundName) {
+        if (!youtubePlayers[soundName]) {
+          showNotification("YouTube player not ready yet");
+          return;
+        }
+
+        const volumeControl = document.querySelector(
+          `[data-sound="${soundName}"] .volume-control`
+        );
+        const volume = volumeControl ? parseInt(volumeControl.value) : 30;
+
+        // Set volume and play
+        const finalVolume = Math.round(masterVolume * volume);
+        youtubePlayers[soundName].setVolume(finalVolume);
+        youtubePlayers[soundName].unMute();
+        youtubePlayers[soundName].playVideo();
+
+        activeSounds[soundName] = {
+          volume: volume,
+        };
+
+        // Update button and card
+        const toggleBtn = document.querySelector(
+          `[data-sound="${soundName}"] .sound-toggle`
+        );
+        const soundCard = document.querySelector(`[data-sound="${soundName}"]`);
+
+        toggleBtn.textContent = "⏸️";
+        toggleBtn.style.background = "linear-gradient(45deg, #feca57, #ff9ff3)";
+        soundCard.classList.add("playing");
+      }
+
+      function stopSound(soundName) {
+        if (activeSounds[soundName] && youtubePlayers[soundName]) {
+          youtubePlayers[soundName].pauseVideo();
+          youtubePlayers[soundName].mute();
+          delete activeSounds[soundName];
+
+          // Update button and card
+          const toggleBtn = document.querySelector(
+            `[data-sound="${soundName}"] .sound-toggle`
+          );
+          const soundCard = document.querySelector(
+            `[data-sound="${soundName}"]`
+          );
+
+          toggleBtn.textContent = "▶️";
+          toggleBtn.style.background =
+            "linear-gradient(45deg, #4ecdc4, #45b7d1)";
+          soundCard.classList.remove("playing");
+        }
+      }
+
+      function updateSoundVolume(soundName, volume) {
+        const volumeDisplay = document.querySelector(
+          `[data-sound="${soundName}"] .volume-display`
+        );
+        volumeDisplay.textContent = volume + "%";
+
+        if (activeSounds[soundName] && youtubePlayers[soundName]) {
+          activeSounds[soundName].volume = parseInt(volume);
+          const finalVolume = Math.round(masterVolume * volume);
+          youtubePlayers[soundName].setVolume(finalVolume);
+        }
+      }
+
+      function loadPreset(presetName) {
+        if (!masterEnabled) {
+          showNotification("Please enable master sound first");
+          return;
+        }
+
+        const preset = soundPresets[presetName];
+        if (!preset) return;
+
+        // Stop all current sounds
+        Object.keys(activeSounds).forEach((sound) => {
+          stopSound(sound);
+        });
+
+        // Load preset sounds
+        Object.keys(preset).forEach((sound) => {
+          const volumeControl = document.querySelector(
+            `[data-sound="${sound}"] .volume-control`
+          );
+          if (volumeControl) {
+            volumeControl.value = preset[sound];
+            updateSoundVolume(sound, preset[sound]);
+            playSound(sound);
+          }
+        });
+
+        showNotification(`Loaded ${presetName} preset`);
+      }
+
+      // Initialize ambient sound system
+      function initializeAmbientSound() {
+        // Initialize YouTube API
+        initializeYouTubeAPI();
+      }
+    </script>
+  </body>
+</html>
