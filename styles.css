@@ -1563,25 +1563,30 @@ body::before {
 
 /* Level Up Rewards Section */
 .rewards-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.3) 0%,
+    rgba(118, 75, 162, 0.3) 100%
+  );
   border-radius: 20px;
   padding: 30px;
   margin: 30px 0;
-  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .rewards-title {
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
-  background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+  background: linear-gradient(45deg, #e0e0e0, #f0f0f0, #e0e0e0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-  animation: shimmer 3s ease-in-out infinite;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: shimmer 4s ease-in-out infinite;
 }
 
 @keyframes shimmer {
@@ -1590,7 +1595,7 @@ body::before {
     filter: brightness(1) saturate(1);
   }
   50% {
-    filter: brightness(1.2) saturate(1.3);
+    filter: brightness(1.1) saturate(1.1);
   }
 }
 
@@ -1604,10 +1609,10 @@ body::before {
 .reward-card {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
   );
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
   padding: 25px;
   position: relative;
@@ -1626,7 +1631,7 @@ body::before {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1),
     transparent
   );
   transition: left 0.5s ease;
@@ -1637,14 +1642,14 @@ body::before {
 }
 
 .reward-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .reward-card.locked {
-  opacity: 0.6;
-  filter: grayscale(0.8);
+  opacity: 0.7;
+  filter: grayscale(0.6);
 }
 
 .reward-card.unlocked {
@@ -1656,8 +1661,8 @@ body::before {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   }
   100% {
     transform: scale(1);
@@ -1668,41 +1673,51 @@ body::before {
   position: absolute;
   top: -10px;
   right: -10px;
-  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 107, 107, 0.8),
+    rgba(255, 142, 83, 0.8)
+  );
   color: white;
-  font-weight: 800;
-  font-size: 1.2rem;
-  padding: 8px 15px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
   z-index: 2;
 }
 
 .reward-card.unlocked .reward-level {
-  background: linear-gradient(45deg, #4ecdc4, #45b7d1);
-  animation: levelGlow 2s ease-in-out infinite;
+  background: linear-gradient(
+    45deg,
+    rgba(78, 205, 196, 0.8),
+    rgba(69, 183, 209, 0.8)
+  );
+  animation: levelGlow 3s ease-in-out infinite;
 }
 
 @keyframes levelGlow {
   0%,
   100% {
-    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+    box-shadow: 0 3px 10px rgba(78, 205, 196, 0.3);
   }
   50% {
-    box-shadow: 0 5px 25px rgba(78, 205, 196, 0.8);
+    box-shadow: 0 3px 15px rgba(78, 205, 196, 0.5);
   }
 }
 
 .reward-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
   display: block;
   text-align: center;
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+  opacity: 0.9;
 }
 
 .reward-card.unlocked .reward-icon {
-  animation: iconBounce 1s ease-in-out infinite;
+  animation: iconBounce 2s ease-in-out infinite;
+  opacity: 1;
 }
 
 @keyframes iconBounce {
@@ -1711,31 +1726,31 @@ body::before {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
 }
 
 .reward-name {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 10px;
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .reward-description {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
   line-height: 1.5;
   margin-bottom: 15px;
 }
 
 .reward-progress {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  height: 6px;
   margin: 15px 0;
   overflow: hidden;
   position: relative;
@@ -1743,8 +1758,12 @@ body::before {
 
 .reward-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #4ecdc4, #45b7d1);
-  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(78, 205, 196, 0.8),
+    rgba(69, 183, 209, 0.8)
+  );
+  border-radius: 8px;
   transition: width 0.5s ease;
   position: relative;
 }
@@ -1759,39 +1778,50 @@ body::before {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.2),
     transparent
   );
   animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .reward-status {
   font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
-  padding: 8px 15px;
-  border-radius: 20px;
+  padding: 5px 10px;
+  border-radius: 8px;
   margin-top: 10px;
 }
 
 .reward-status.locked {
-  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-  color: white;
+  background: rgba(255, 107, 107, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 107, 107, 0.3);
 }
 
 .reward-status.unlocked {
-  background: linear-gradient(45deg, #4ecdc4, #45b7d1);
-  color: white;
-  animation: statusPulse 2s ease-in-out infinite;
+  background: rgba(78, 205, 196, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  animation: statusPulse 3s ease-in-out infinite;
 }
 
 @keyframes statusPulse {
   0%,
   100% {
-    opacity: 1;
+    box-shadow: 0 0 5px rgba(78, 205, 196, 0.3);
   }
   50% {
-    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
   }
 }
 
